@@ -1,0 +1,27 @@
+//colors
+$purple: #8806c0;
+$green: #00f08f;
+
+
+// layout
+@import "layout/normalize.min";
+@import "layout/adjustment";
+// @import "layout/fonts";
+// @import "layout/font-awesome";
+
+// sections
+@import "sections/general";
+// @import "sections/content";
+// @import "sections/footer";
+@import "sections/header";
+// @import "sections/sidebar";
+// @import "sections/about";
+// @import "sections/carier";
+// @import "sections/portfolio";
+// @import "sections/index";
+@import "sections/modal";
+
+// media
+@import "media/desktop";
+@import "media/tablet";
+@import "media/mobile";

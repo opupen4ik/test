@@ -1,0 +1,140 @@
+$header-height: 60px;
+
+@media screen and (max-width: 1000px) {
+
+.header {
+	background: #011226;
+	height: $header-height;
+	border: none;
+}
+.header__menu {
+	order: 1;
+	margin-left: 20px;
+}
+.menu__icon {
+	display: block;
+}
+.menu__nav {
+	position: fixed;
+	top: $header-height;
+	left: 0;
+	width: 100%;
+	max-height: 0;
+	overflow: auto;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s;
+	* {
+		transition: 0.5s;
+		max-height: 0;
+	}
+	&.active {
+		max-height: calc(100vh - #{$header-height});
+		opacity: 1;
+		pointer-events: auto;
+		* {
+			max-height: 100500px;
+		}
+		.nav__list {
+			.nav__item {
+				height: 33px;
+				&.nav__item_log-in {
+					height: 65px;
+					.btn-purple {
+						height: auto;
+					}
+				}
+				&.nav__item_whitepaper {
+					height: 45px;
+				}
+				&.nav__item_lightpaper,
+				&.nav__item_presentation,
+				&.nav__item_one-pager,
+				&.nav__item_pager,
+				&.nav__item_coin-auditing,
+				&.nav__item_get-coins {
+					height: 45px;
+				}
+			}
+		}
+		
+	}
+}
+.nav__list {
+	display: block;
+}
+.nav__item {
+	margin: 0;
+	line-height: 33px;
+	border-bottom: 1px #e5e5e5 solid;
+	background: #fff;
+	color: $purple;
+	&.nav__item_evaluation,
+	&.nav__item_coin {
+		padding: 0;
+	}
+	&.nav__item_announcements {
+		.nav__icon {
+			display: none;
+		}
+		.nav__text {
+			display: inline-block;
+		}
+	}
+	&:last-child {
+		border-bottom: 1px #b1b1b1 solid;
+	}
+	&.nav__item_log-in {
+		line-height: 65px;
+		padding: 10px 30px;
+		box-sizing: border-box;
+		.btn-purple {
+			display: block;
+			width: auto;
+		}
+	}
+	&.nav__item_whitepaper {
+		line-height: 45px;
+		.btn-green {
+			background: inherit;
+			color: inherit;
+			width: auto;
+			height: inherit;
+			line-height: inherit;
+		}
+	}
+	&.nav__item_lightpaper,
+	&.nav__item_presentation,
+	&.nav__item_one-pager,
+	&.nav__item_pager,
+	&.nav__item_coin-auditing,
+	&.nav__item_get-coins {
+		display: block;
+		line-height: 45px;
+	}
+	&.nav__item_announcements {
+		.nav__icon {
+			display: none;
+		}
+		.nav__text {
+			display: block;
+		}
+	}
+}
+.nav__superscript {
+    top: 25%;
+	right: 25%;
+}
+.header__log-lang {
+	order: 2;
+}
+.header__login {
+	order: 3;
+	margin-right: 20px;
+}
+
+.wrapper {
+	padding-top: $header-height;
+}
+
+}

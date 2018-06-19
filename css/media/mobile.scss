@@ -1,0 +1,32 @@
+$header-height: 60px;
+
+@media screen and (max-width: 480px) {
+
+.header {
+	background: #000;
+	height: $header-height;
+	border: none;
+}
+.header__menu {
+	margin-left: 10px;
+}
+.menu__nav {
+	top: $header-height;
+	&.active {
+		max-height: calc(100vh - #{$header-height});
+	}
+}
+.nav__item {
+	padding: 0;
+}
+.nav__superscript {
+	right: 30%;
+}
+.header__login {
+	margin-right: 30px;
+}
+.wrapper {
+	padding-top: $header-height;
+}
+
+}
